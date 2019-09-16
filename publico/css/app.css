@@ -1,0 +1,372 @@
+#tudo {
+	margin:0% 2%;
+	width:100%;
+}
+
+#imagemlogo{
+	width:50%;
+	justify-content:flex-start;
+}
+
+#topo {
+	position:fixed;
+	background-color:white;
+	display: flex;
+	width:101%;
+	height:15%;
+	justify-content:space;
+	margin-top:-1%;
+	margin-left: -2.5%;
+}
+
+#inicio {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	margin-left:2%;
+	margin-right: 2%;
+	width:101%;
+	
+}
+
+#icons {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	width:50%;
+	justify-content:flex-end;
+	margin-top:1.5%;
+	margin-right:3%;
+}
+
+#menu ul li {
+	display: inline;
+}
+
+#menu ul li a {
+			
+	display: inline;
+	text-decoration: none;
+	color: #999999;
+}
+
+#menus {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	background-color: black;
+	width: 108%;
+	height: 60px;	
+	font-size: 20px;
+	color: white;
+	margin-top:-1%;
+	margin-left: -6%;
+	position:fixed;
+		
+}
+
+#menu2 ul li {
+	display: inline;
+}
+
+#menu2 ul li a {		
+	display: inline;
+	text-decoration: none;
+        color: grey;
+}
+
+#menus2 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	background-color: white;
+	width: 75%;
+	height: 60px;	
+	font-size: 20px;
+	color: white;
+	margin-top:5%;
+	margin-left: 10%;
+        border-bottom: solid;
+        border-bottom-color: grey;
+}
+
+#lista {
+	margin-left:6%;
+}
+
+#lista1{
+	margin-left:20%;
+}
+
+#rodape {
+	display:flex;
+	background-color:black;
+	width:108%;
+	margin-left: -3%;
+	margin-top: 1%;
+	height: 30%;
+	flex-direction:row;
+	justify-content:space-around;
+	justify-content:center;
+	flex-wrap:nowrap;
+	color:white;
+        margin-top: 20%;
+}
+
+
+#slide {
+	width:100%;
+	margin-top: -5%;
+}
+#destaqim {
+		margin-top: 5%;
+}
+
+#destaque {
+	font-family: courier new;
+	width: 10%;
+	margin-left: 40%;
+	margin-top: 1%;
+	text-align: center;
+}
+
+#p1 {
+	font-family: courier new;
+	margin-left: 50%;
+	margin-top: -2.6%;
+	font-size: 18px;
+}
+
+#paragraf1 {
+	color: black;
+        
+}
+
+#parteim2 {
+	border: solid;
+	width: 20%;
+}
+
+#parteim {
+	border-bottom: solid 6px;
+	border-top: solid 6px;
+	width: 100%;
+}
+
+#roupa1 {
+	height: 500px;
+}
+
+#roupa2 {
+	height: 500px;
+}
+
+#roupa3 {
+	height: 500px;
+}
+
+#roupa4 {
+	height: 500px;
+}
+
+#roupa5 {
+	height: 500px;
+}
+
+#roupa6 {
+	height: 500px;
+}
+
+#r3 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	background-color: white;
+	width: 80%;
+	margin-left: 10%;
+	padding-bottom: 5%;
+}
+
+#r6 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	background-color: white;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10%;
+	padding-bottom: 5%;
+}
+
+#compre {
+	padding-left: 2%;
+	margin-top: 2%;
+}
+
+#botaoimg {
+	margin-top: -46%;
+	margin-left: 61%;
+}
+
+
+#marcanova {
+	border-top: solid 4px black;
+	border-bottom: solid 4px black;
+	width: 17%;
+	margin-left: 43%;
+	margin-top: -20%;
+}
+
+#botao {
+	font-family: courier new;
+	background-color: black;
+	border-radius: 50px;
+	border-width:1%;
+	border:grey solid 2px;
+	width: 12%;
+	height: 60px;
+	margin-left: 45%;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+        margin-top:10%;
+}
+
+#divbotao {
+	margin-top: 6%;
+}
+
+
+#divforms {
+	margin-top:8%;
+	width: 102%;
+	margin-left: -1%;
+	height: 245px;
+	background-color: black;
+}
+
+.iconsforms {
+	width: 60px;
+	
+}
+
+#telimg {
+	width: 45px;
+}
+
+#telefone {
+	color: white;
+	text-align: center;
+	width: 36%;
+	padding-top: 2%;
+}
+
+#pague {
+	color: white;
+	text-align: center;
+	width: 40%;
+	height: 190px;
+	margin-left: 30%;
+	margin-top: -9%;
+}
+
+#contato {
+	color: white;
+	text-align: center;
+	width: 42%;
+	margin-left: 60%;
+	margin-top: -200px;
+}
+
+
+.hforms {
+	font-family: courier new;
+}
+
+#penult {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	width: 90%;
+	margin-top: -1%;
+	margin-right: 2%;
+	margin-left: 3.3%;
+}
+
+.penultimg {
+	width: 520px;
+	height: 900px;
+}
+
+#escritacompra {
+	border: solid;
+	border-color: white;
+	width: 22%;
+	height: 200px;
+	margin-left: 12%;
+	margin-top: -5%;
+	background-color: white;
+}
+
+#escritacompra2 {
+	border: solid;
+	border-color: white;
+	width: 22%;
+	height: 196px;
+	margin-left: 39%;
+	margin-top: -210px;
+	background-color: white;
+}
+
+#escritacompra3 {
+	border: solid;
+	border-color: white;
+	width: 22%;
+	margin-left: 66%;
+	margin-top: -200px;
+	background-color: white;
+}
+
+#escritacompra4 {
+	border: solid;
+	border-color: white;
+	margin-left: 12%;
+	margin-top: -5%;
+	width: 22%;
+	height: 200px;
+	background-color: white;
+}
+
+#escritacompra5 {
+	border: solid;
+	border-color: white;
+	margin-left: 39%;
+	margin-top: -210px;
+	width: 22%;
+	height: 200px;
+	background-color: white;
+}
+
+#escritacompra6 {
+	border: solid;
+	border-color: white;
+	margin-left: 66%;
+	margin-top: -203px;
+	width: 22%;
+	height: 200px;
+	background-color: white;
+}
+
+
+
