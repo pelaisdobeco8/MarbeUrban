@@ -15,7 +15,7 @@
 	<div id="inicio">
 			
 	<div id="imagemlogo">
-            <a href="#"> <img src="publico/imagens/logo.png" width="230px"> </a>
+            <a href="#"> <img src="./publico/imagens/logo.png" width="230px"> </a>
 	</div>
 			
             <div id="icons">
@@ -23,7 +23,7 @@
                 <input type="text" name="busca" placeholder="pesquisa"> 
                 </form>
                 <a href="#"> <img src="publico/imagens/lupa.jpg" width="50px" title="Pesquisar" id="lupa"> </a>
-                <a href="#"> <img src="publico/imagens/rostinho.png" width="50px" title="Login" id="rosto"> </a>
+                <a href="./login/index/"> <img src="publico/imagens/rostinho.png" width="50px" title="Login" id="rosto"> </a>
                 <a href="#"> <img src="publico/imagens/carrinho2.png" width="43px" title="Meu carrinho" id="carrinho"> </a>			
             </div>
 

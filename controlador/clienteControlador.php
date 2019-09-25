@@ -10,7 +10,6 @@ function adicionar () {
                 $cpf = $_POST ["cpf"];
                 $datadenascimento = $_POST ["datadenacimento"];
 		$sexo = $_POST ["sexo"];
-		$tipousuario = $_POST ["tipousuario"];
                 $errors = array ();
                 
             if (strlen(trim($nomeusuario)) == 0){
@@ -35,16 +34,13 @@ function adicionar () {
             if (strlen(trim($sexo)) == 0){
                 $errors[] = "Você deve inserir um sexo";
             }
-            if (strlen(trim($tipousuario)) == 0){
-                $errors[] = "Você deve informar que tipo de usuário é";
-            }
             
             if (count($errors)> 0){
                 $dadoserro = array();
                 $dadoserro["errors"] = $errors;
                 exibir ("cliente/formulario", $dadoserro);
             }else {
-                $msg = adicionarCliente($nomeusuario, $email, $senha, $cpf, $datadenascimento, $sexo, $tipousuario );
+                $msg = adicionarCliente($nomeusuario, $email, $senha, $cpf, $datadenascimento, $sexo );
                 echo $msg;
             }
     
@@ -77,12 +73,13 @@ function editar ($idusuario) {
         $cpf = $_POST ["cpf"];
         $datadenascimento = $_POST ["datadenascimento"];
         $sexo = $_POST ["sexo"];
-	$tipousuario = $_POST ["tipousuario"];
         
-        editarCliente($idusuario, $nomeusuario, $email, $senha, $cpf, $datadenascimento, $sexo, $tipousuario);
+        editarCliente($idusuario, $nomeusuario, $email, $senha, $cpf, $datadenascimento, $sexo);
         redirecionar ("cliente/listar");
     }else {
         $dados["usuarios"] = pegarClienteporId($idusuario);
         exibir("cliente/formulario", $dados);
     }
 }
+
+

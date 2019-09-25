@@ -7,6 +7,5 @@
 <p>CPF: <?=$usuarios['cpf']?></p>
 <p>Data de Nascimento: <?=$usuarios['datadenascimento']?></p>
 <p>Sexo: <?=$usuarios['sexo']?></p>
-<p>Tipo de usuário: <?=$usuarios['tipousuario']?></p>
 
 <a href="./endereco/adicionar/<?=$usuarios['idusuario']?>" class="btn btn-primary">Novo endereco</a>

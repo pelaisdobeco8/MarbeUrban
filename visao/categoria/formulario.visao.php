@@ -9,8 +9,8 @@
 ?>
 
 <form action="" method="POST">
-    <input type="text" placeholder="Nome da categoria" name="nomecategoria"><br><br>
-    <input type="text" placeholder="Descrição" name="descricaocategoria"><br><br>
+    <input type="text" placeholder="Nome da categoria" name="nomecategoria" value="<?=@$categorias['nomecategoria']?>"><br><br>
+    <input type="text" placeholder="Descrição" name="descricaocategoria" value="<?=@$categorias['descricaocategoria']?>"><br><br>
 
 	<button type="submit">Cadastrar</button>
 </form>

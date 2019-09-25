@@ -9,7 +9,7 @@
 ?>
 
 <form action="" method="POST">
-    <input type="text" placeholder="Forma de Pagamento" name="descricao"><br><br>
+    <input type="text" placeholder="Forma de Pagamento" name="descricao" value="<?= @$pagamentos['descricao']?>"><br><br>
 
 	<button type="submit">Cadastrar</button>
 </form>

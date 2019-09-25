@@ -1,18 +1,18 @@
 <?php
 
-require_once "modelo/usuarioModelo.php";
+require_once "modelo/clienteModelo.php";
 
 /** anon */
 function index() {
     if (ehPost()) {
         extract($_POST);
-        $usuario = pegarUsuarioPorEmailSenha($email, $senha);
+        $usuario = pegarClientePorEmailSenha($email, $senha);
         
         if (acessoLogar($usuario)) {
-            alert("bem vindo" . $login);
+            alert("Bem vindo" . $login);
             redirecionar("usuario");
         } else {
-            alert("usuario ou senha invalidos!");
+            alert("Usuário ou senha invalidos!");
         }
     }
     exibir("login/index");
@@ -21,7 +21,7 @@ function index() {
 /** anon */
 function logout() {
     acessoDeslogar();
-    alert("deslogado com sucesso!");
+    alert("Deslogado com sucesso!");
     redirecionar("usuario");
 }
 

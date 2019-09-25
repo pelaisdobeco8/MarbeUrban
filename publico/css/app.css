@@ -14,7 +14,7 @@
 	display: flex;
 	width:101%;
 	height:15%;
-	justify-content:space;
+	justify-content: space-around;
 	margin-top:-1%;
 	margin-left: -2.5%;
 }
@@ -229,7 +229,7 @@
 	font-family: courier new;
 	background-color: black;
 	border-radius: 50px;
-	border-width:1%;
+	border-width: 01%;
 	border:grey solid 2px;
 	width: 12%;
 	height: 60px;
