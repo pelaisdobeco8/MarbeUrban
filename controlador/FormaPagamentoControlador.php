@@ -2,6 +2,7 @@
 
 require_once "modelo/FormaPagamentoModelo.php";
 
+/** admin */
 function adicionar (){
     if (ehPost ()){
         $descricao = $_POST["descricao"];
@@ -20,22 +21,26 @@ function adicionar (){
     }
 }
 
+/** admin */
 function listar () {
     $dados = array ();
     $dados["pagamentos"] = pegarTodosPagamentos();
     exibir ("FormaPagamento/listar", $dados);
 }
 
+/** admin */
 function ver ($idFormaPagamento){
     $dados["pagamentos"] = pegarPagamentoPorId($idFormaPagamento);
     exibir ("FormaPagamento/visualizar" , $dados);
 }
 
+/** admin */
 function deletar ($idFormaPagamento){
     $msg = deletarPagamento($idFormaPagamento);
     redirecionar("./FormaPagamento/listar");
 }
 
+/** admin */
 function editar ($idFormaPagamento) {
     if (ehPost()) {
         $descricao = $_POST["descricao"];

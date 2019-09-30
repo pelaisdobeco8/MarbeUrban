@@ -6,9 +6,9 @@ require_once "modelo/clienteModelo.php";
 function index() {
     if (ehPost()) {
         extract($_POST);
-        $usuario = pegarClientePorEmailSenha($email, $senha);
+        $usuarios = pegarClientePorEmailSenha($email, $senha);
         
-        if (acessoLogar($usuario)) {
+        if (acessoLogar($usuarios)) {
             alert("Bem vindo" . $login);
             redirecionar("usuario");
         } else {

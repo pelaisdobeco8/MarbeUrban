@@ -1,6 +1,6 @@
 <h2>Listar Formas de Pagamento</h2>
 
-<table class="table">
+<table class="table" border="1">
     <thead>
         <tr>
             <th>Descrição</th>

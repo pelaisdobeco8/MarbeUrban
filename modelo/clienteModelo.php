@@ -1,7 +1,7 @@
 <?php
 
-function adicionarCliente ($nomeusuario, $email, $senha, $cpf, $datadenascimento, $sexo) {
-    $sql = "INSERT INTO usuario (nomeusuario, email, senha, cpf, datadenascimento, sexo) VALUES ('$nomeusuario', '$email', '$senha', '$cpf', '$datadenascimento', '$sexo')"; 
+function adicionarCliente ($nomeusuario, $email, $senha, $cpf, $datadenascimento, $sexo, $tipousuario) {
+    $sql = "INSERT INTO usuario (nomeusuario, email, senha, cpf, datadenascimento, sexo, tipousuario) VALUES ('$nomeusuario', '$email', '$senha', '$cpf', '$datadenascimento', '$sexo', '$tipousuario')"; 
     $resultado = mysqli_query ($cnx = conn(), $sql);
     if(!$resultado) { die('Erro ao cadastrar cliente'.mysqli_error($cnx));}
     return 'Cliente cadastrado com sucesso! <br> <a href="./cliente/adicionar/" class="btn btn-primary">Voltar</a>';
@@ -33,8 +33,8 @@ function deletarCliente ($idusuario) {
     return 'Usuario deletado com sucesso!';
 }
 
-function editarCliente ($idusuario, $nomeusuario, $email, $senha, $cpf, $datadenascimento, $sexo) {
-    $sql = "UPDATE usuario SET nomeusuario = '$nomeusuario', email = '$email', senha = '$senha', cpf = '$cpf', datadenascimento = '$datadenascimento', sexo = '$sexo' WHERE idusuario = $idusuario";
+function editarCliente ($idusuario, $nomeusuario, $email, $senha, $cpf, $datadenascimento, $sexo, $tipousuario) {
+    $sql = "UPDATE usuario SET nomeusuario = '$nomeusuario', email = '$email', senha = '$senha', cpf = '$cpf', datadenascimento = '$datadenascimento', sexo = '$sexo', tipousuario = '$tipousuario' WHERE idusuario = $idusuario";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if (!$resultado) {
         die ('Erro ao alterar usuario' . mysqli_error($cnx));
@@ -46,6 +46,6 @@ function editarCliente ($idusuario, $nomeusuario, $email, $senha, $cpf, $dataden
 function pegarClientePorEmailSenha($email, $senha) {
     $sql = "SELECT * FROM cliente WHERE email= '$email' and senha = '$senha'";
     $resultado = mysqli_query(conn(), $sql);
-    $usuario = mysqli_fetch_assoc($resultado);
-    return $usuario;
+    $usuarios = mysqli_fetch_assoc($resultado);
+    return $usuarios;
 }

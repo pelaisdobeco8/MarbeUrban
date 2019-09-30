@@ -2,6 +2,7 @@
 
 require_once "modelo/clienteModelo.php";
 
+/** user */
 function adicionar () {
 	if (ehPost ()) {
 		$nomeusuario = $_POST ["nomeusuario"];
@@ -10,6 +11,7 @@ function adicionar () {
                 $cpf = $_POST ["cpf"];
                 $datadenascimento = $_POST ["datadenacimento"];
 		$sexo = $_POST ["sexo"];
+                $tipousuario = $_POST ["tipousuario"];
                 $errors = array ();
                 
             if (strlen(trim($nomeusuario)) == 0){
@@ -34,13 +36,16 @@ function adicionar () {
             if (strlen(trim($sexo)) == 0){
                 $errors[] = "Você deve inserir um sexo";
             }
+            if (strlen(trim($tipousuario)) == 0){
+                $errors[] = "Você deve informar o tipo de user";
+            }
             
             if (count($errors)> 0){
                 $dadoserro = array();
                 $dadoserro["errors"] = $errors;
                 exibir ("cliente/formulario", $dadoserro);
             }else {
-                $msg = adicionarCliente($nomeusuario, $email, $senha, $cpf, $datadenascimento, $sexo );
+                $msg = adicionarCliente($nomeusuario, $email, $senha, $cpf, $datadenascimento, $sexo, $tipousuario );
                 echo $msg;
             }
     
@@ -49,22 +54,26 @@ function adicionar () {
 	}
 }
 
+/** admin */
 function listar () {
     $dados = array ();
     $dados["usuarios"] = pegarTodosClientes();
     exibir ("cliente/listar", $dados);
 }
 
+/** admin */
 function ver ($idusuario){
     $dados["usuarios"] = pegarClientePorId($idusuario);
     exibir ("cliente/visualizar" , $dados);
 }
 
+/** admin */
 function deletar ($idusuario){
     $msg = deletarCliente($idusuario);
     redirecionar("./cliente/listar");
 }
 
+/** user */
 function editar ($idusuario) {
     if (ehPost()) {
         $nomeusuario = $_POST ["nomeusuario"];
@@ -73,8 +82,9 @@ function editar ($idusuario) {
         $cpf = $_POST ["cpf"];
         $datadenascimento = $_POST ["datadenascimento"];
         $sexo = $_POST ["sexo"];
+        $tipousuario = $_POST ["tipousuario"];
         
-        editarCliente($idusuario, $nomeusuario, $email, $senha, $cpf, $datadenascimento, $sexo);
+        editarCliente($idusuario, $nomeusuario, $email, $senha, $cpf, $datadenascimento, $sexo, $tipousuario);
         redirecionar ("cliente/listar");
     }else {
         $dados["usuarios"] = pegarClienteporId($idusuario);

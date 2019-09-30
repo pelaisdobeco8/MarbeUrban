@@ -1,7 +1,7 @@
 <?php
 require_once "modelo/produtoModelo.php";
 
-
+/** anon */
 function index(){
 
     $_SESSION["quantcarrinho"]=0;
@@ -25,6 +25,7 @@ function index(){
     }
 }
 
+/** anon */
 function adicionar($id){
 
     if (!isset($_SESSION["carrinho"])) {
@@ -46,6 +47,7 @@ function adicionar($id){
     redirecionar("carrinho/index");    
 }
 
+/** anon */
 function remover($index){
     
     foreach($_SESSION["carrinho"] as $key => $produtos){

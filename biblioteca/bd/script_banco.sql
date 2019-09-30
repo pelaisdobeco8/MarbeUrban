@@ -38,6 +38,7 @@ senha VARCHAR(60) NOT NULL,
 cpf BIGINT NOT NULL,
 datadenascimento VARCHAR(10) NOT NULL,
 sexo VARCHAR(60) NOT NULL,
+tipousuario VARCHAR(5),
 PRIMARY KEY(idusuario)
 );
 

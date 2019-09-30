@@ -1,6 +1,6 @@
 <h2>Listar Endereços</h2>
 
-<table class="table">
+<table class="table" border="1">
     <thead>
         <tr>
             <th>Logradouro</th>

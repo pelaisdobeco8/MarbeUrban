@@ -2,6 +2,7 @@
 
 require_once "modelo/categoriaModelo.php";
 
+/** admin */
 function adicionar (){
     if (ehPost ()){
         $nomecategoria = $_POST["nomecategoria"];
@@ -29,22 +30,26 @@ function adicionar (){
     }
 }
 
+/** admin */
 function listar () {
     $dados = array ();
     $dados["categorias"] = pegarTodasCategorias();
     exibir ("categoria/listar", $dados);
 }
 
+/** admin */
 function ver ($id_categoria){
     $dados["categorias"] = pegarCategoriaPorId($id_categoria);
     exibir ("categoria/visualizar" , $dados);
 }
 
+/** admin */
 function deletar ($id_categoria){
     $msg = deletarCategoria($id_categoria);
     redirecionar("./categoria/listar");
 }
 
+/** admin */
 function editar ($id_categoria) {
     if (ehPost()) {
         $nomecategoria = $_POST["nomecategoria"];

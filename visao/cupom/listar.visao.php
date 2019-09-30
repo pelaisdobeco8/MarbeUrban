@@ -1,6 +1,6 @@
 <h2>Listar Cupons</h2>
 
-<table class="table">
+<table class="table" border="1">
     <thead>
         <tr>
             <th>Nome</th>

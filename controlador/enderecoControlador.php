@@ -2,6 +2,7 @@
 
 require_once "modelo/enderecoModelo.php";
 
+/** user */
 function adicionar ($idusuario) {
 	if (ehPost ()) {
             $logradouro = $_POST ["logradouro"];
@@ -20,22 +21,26 @@ function adicionar ($idusuario) {
            exibir ("endereco/formulario");
 }
 
+/** admin */
 function listar () {
     $dados = array ();
     $dados["enderecos"] = pegarTodosEnderecos();
     exibir ("endereco/listar", $dados);
 }
 
+/** user */
 function ver ($idendereco){
     $dados["enderecos"] = pegarEnderecoPorId($idendereco);
     exibir ("endereco/visualizar" , $dados);
 }
 
+/** user */
 function deletar ($idendereco){
     $msg = deletarEndereco($idendereco);
     redirecionar("./endereco/listar");
 }
 
+/** user */
 function editar ($idendereco) {
     if (ehPost()) {
         
