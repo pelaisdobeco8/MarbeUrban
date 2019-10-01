@@ -37,30 +37,29 @@
 		
                 <div id="menus">
             
-		<li> <a href="./paginas/" title="Home"> Inicio </a> </li>	
+                <li> <a href="./paginas/" title="Home"> Inicio </a> </li>	
 		<li> <a href="#" title="Produtos"> Produtos</a> </li> 
 		<li> <a href="./cliente/adicionar/" class="btn btn-primary" title="Cadastre-se"> Cadastre-se </a> </li> 
 		<li> <a href="./carrinho/" title="Carrinho"> Carrinho </a> </li>	
-		<li> <a href="#" title="Administrador"> Administrador </a> </li>
+		<li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="visao/adm/" title="Administrador"> Administrador </a> <?php } ?> </li>
                 
                 </div>
             </ul>
         </div>	
- 
-        <div id="menu2">
+      <div id="menu2">
             <ul>
 		
-                <div id="menus2">
+               <div id="menus2">
             
-		<li> <a href="./cliente/listar"> Listar usuários </a> </li> 
-                <li> <a href="./produto/listar"> Listar produtos </a> </li>
-                <li> <a href="./categoria/listar"> Listar categorias </a> </li>
-                <li> <a href="./cupom/listar"> Listar cupons </a> </li>
-                <li> <a href="./endereco/listar"> Listar endereços </a> </li>
-                <li> <a href="./FormaPagamento/listar"> Listar Formas de Pagamento </a> </li>
+		<li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./cliente/listar"> Listar usuários </a> <?php } ?> </li> 
+                <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/listar"> Listar produtos </a> <?php } ?> </li>
+                <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./categoria/listar"> Listar categorias </a> <?php } ?> </li>
+                <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./cupom/listar"> Listar cupons </a> <?php } ?> </li>
+                <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./endereco/listar"> Listar endereços </a> <?php } ?> </li>
+                <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./FormaPagamento/listar"> Listar Formas de Pagamento </a> <?php } ?> </li>
                 </div>
             </ul>
-        </div>
+        </div> <br><br><br>
         
         <main class="container">
             <?php require $viewFilePath; ?>

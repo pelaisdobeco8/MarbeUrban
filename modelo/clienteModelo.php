@@ -44,7 +44,7 @@ function editarCliente ($idusuario, $nomeusuario, $email, $senha, $cpf, $dataden
 }
 
 function pegarClientePorEmailSenha($email, $senha) {
-    $sql = "SELECT * FROM cliente WHERE email= '$email' and senha = '$senha'";
+    $sql = "SELECT * FROM usuario WHERE email= '$email' and senha = '$senha'";
     $resultado = mysqli_query(conn(), $sql);
     $usuarios = mysqli_fetch_assoc($resultado);
     return $usuarios;

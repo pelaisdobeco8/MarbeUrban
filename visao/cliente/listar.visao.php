@@ -23,9 +23,9 @@
         <td><?=$usuario['cpf']?></td>
         <td><?=$usuario['datadenascimento']?></td>
         <td><?=$usuario['sexo']?></td>
-        <td><a href="./cliente/ver/<?=$usuario['idusuario']?>">Ver</a></td>
+        <td>  <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./cliente/ver/<?=$usuario['idusuario']?>">Ver</a> <?php } ?> </td>
         <td><a href="./cliente/editar/<?=$usuario['idusuario']?>">Editar</a></td>
-        <td><a href="./cliente/deletar/<?=$usuario['idusuario']?>">Deletar</a></td>
+        <td>  <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./cliente/deletar/<?=$usuario['idusuario']?>">Deletar</a> <?php } ?></td>
     </tr>
     <?php endforeach; ?>
 </table>

@@ -2,7 +2,7 @@
 
 require_once "modelo/clienteModelo.php";
 
-/** user */
+/** anon */
 function adicionar () {
 	if (ehPost ()) {
 		$nomeusuario = $_POST ["nomeusuario"];

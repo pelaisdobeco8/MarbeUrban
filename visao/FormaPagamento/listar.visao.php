@@ -14,9 +14,9 @@
     <?php foreach ($pagamentos as $pagamento): ?>
     <tr>
         <td><?=$pagamento['descricao']?></td>
-        <td><a href="./FormaPagamento/ver/<?=$pagamento['idFormaPagamento']?>">Ver</a></td>
-        <td><a href="./FormaPagamento/editar/<?=$pagamento['idFormaPagamento']?>">Editar</a></td>
-        <td><a href="./FormaPagamento/deletar/<?=$pagamento['idFormaPagamento']?>">Deletar</a></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?>  <a href="./FormaPagamento/ver/<?=$pagamento['idFormaPagamento']?>">Ver</a> <?php } ?></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?>  <a href="./FormaPagamento/editar/<?=$pagamento['idFormaPagamento']?>">Editar</a> <?php } ?></td>
+        <td><?php if (acessoPegarPapelDoUsuario() == 'admin') {?>  <a href="./FormaPagamento/deletar/<?=$pagamento['idFormaPagamento']?>">Deletar</a> <?php } ?></td>
     </tr>
     <?php endforeach; ?>
 </table>

@@ -15,9 +15,9 @@
     <tr>
         <td><?=$cupom['nomecupom']?></td>
         <td><?=$cupom['desconto']?></td> 
-        <td><a href="./cupom/ver/<?=$cupom['idcupom']?>">Ver</a></td>
-        <td><a href="./cupom/editar/<?=$cupom['idcupom']?>">Editar</a></td>
-        <td><a href="./cupom/deletar/<?=$cupom['idcupom']?>">Deletar</a></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./cupom/ver/<?=$cupom['idcupom']?>">Ver</a> <?php } ?></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?><a href="./cupom/editar/<?=$cupom['idcupom']?>">Editar</a> <?php } ?></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?><a href="./cupom/deletar/<?=$cupom['idcupom']?>">Deletar</a> <?php } ?></td>
     </tr>
     <?php endforeach; ?>
 </table>
