@@ -62,3 +62,26 @@ nomecupom VARCHAR(60) NOT NULL,
 desconto VARCHAR(40) NOT NULL,
 PRIMARY KEY (idcupom)
 );
+
+CREATE TABLE log_produto (
+id_log INT(11) NOT NULL AUTO_INCREMENT,
+tabela VARCHAR(45) NOT NULL,
+usuario VARCHAR(45) NOT NULL,
+data_hora DATETIME NOT NULL,
+acao VARCHAR(45) NOT NULL,
+dados VARCHAR(1000) NOT NULL,
+PRIMARY KEY (id_log)
+);
+
+CREATE TABLE pedido (
+idpedido INT(11) NOT NULL AUTO_INCREMENT,
+cpf BIGINT NOT NULL,
+idFormaPagamento INT NOT NULL,
+datacompra DATE NOT NULL,
+PRIMARY KEY (idpedido),
+FOREIGN KEY (cpf) REFERENCES usuario(cpf) ON DELETE CASCADE 
+ON UPDATE CASCADE,
+FOREIGN KEY (idFormaPagamento) REFERENCES FormaPagamento(idFormaPagamento) ON DELETE CASCADE 
+ON UPDATE CASCADE
+);
+

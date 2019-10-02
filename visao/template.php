@@ -41,7 +41,8 @@
 		<li> <a href="#" title="Produtos"> Produtos</a> </li> 
 		<li> <a href="./cliente/adicionar/" class="btn btn-primary" title="Cadastre-se"> Cadastre-se </a> </li> 
 		<li> <a href="./carrinho/" title="Carrinho"> Carrinho </a> </li>	
-		<li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="visao/adm/" title="Administrador"> Administrador </a> <?php } ?> </li>
+		<li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="#" title="Administrador"> Administrador </a> <?php } ?> </li>
+                <li> <?php if (acessoPegarPapelDoUsuario() == 'user') {?> <a href="cliente/ver/<?=acessoPegarUsuarioLogado();?>" title="Minha Conta"> Minha Conta </a> <?php } ?> </li>
                 
                 </div>
             </ul>
