@@ -30,7 +30,7 @@
         <td><?=$produto['estoque_minimo']?></td>
         <td><?=$produto['estoque_maximmo']?></td>  
         <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/ver/<?=$produto['idproduto']?>">Ver</a> <?php } ?></td>
-        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/editar/<?=$produto['idproduto']?>">Editar</a>< <?php } ?>/td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/editar/<?=$produto['idproduto']?>">Editar</a> <?php } ?></td>
         <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/deletar/<?=$produto['idproduto']?>">Remover</a> <?php } ?></td>
         <td> <a href="./carrinho/adicionar/<?=$produto['idproduto']?>"> Comprar</a></td>
         
