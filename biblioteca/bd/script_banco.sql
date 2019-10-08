@@ -75,11 +75,15 @@ PRIMARY KEY (id_log)
 
 CREATE TABLE pedido (
 idpedido INT(11) NOT NULL AUTO_INCREMENT,
-cpf BIGINT NOT NULL,
+idendereco INT(11) NOT NULL,
+idusuario INT(11) NOT NULL,
+valorcupom VARCHAR(60),
 idFormaPagamento INT NOT NULL,
 datacompra DATE NOT NULL,
 PRIMARY KEY (idpedido),
-FOREIGN KEY (cpf) REFERENCES usuario(cpf) ON DELETE CASCADE 
+FOREIGN KEY (idusuario) REFERENCES usuario(idusuario) ON DELETE CASCADE 
+ON UPDATE CASCADE,
+FOREIGN KEY (idendereco) REFERENCES endereco(idendereco) ON DELETE CASCADE 
 ON UPDATE CASCADE,
 FOREIGN KEY (idFormaPagamento) REFERENCES FormaPagamento(idFormaPagamento) ON DELETE CASCADE 
 ON UPDATE CASCADE
