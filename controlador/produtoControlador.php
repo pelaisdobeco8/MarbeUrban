@@ -11,7 +11,7 @@ function adicionar () {
 		$preco = $_POST ["preco"];
 		$descricao = $_POST["descricao"];
                 $tamanho = $_POST["tamanho"];
-                $imagem = $_POST["imagem"];
+                
                 $estoque_minimo = $_POST ["estoque_minimo"];
                 $estoque_maximmo = $_POST ["estoque_maximmo"];
                 $errors = array();
@@ -28,9 +28,6 @@ function adicionar () {
                 if (strlen(trim($tamanho)) == 0){
                 $errors[] = "Você deve inserir o(s) tamanho(s) de seu produto";
                 }
-                if (strlen(trim($imagem)) == 0){
-                $errors[] = "Você deve inserir uma imagem referente ao roduto";
-                }
                 if (strlen(trim($estoque_minimo)) == 0){
                 $errors[] = "Você deve inserir a quantidade mínima no estoque";
                 }
@@ -38,13 +35,20 @@ function adicionar () {
                 $errors[] = "Você deve inserir a quantidade máxima no estoque";
                 }
                 
+                $imagem = $_FILES["imagem"];
+                $destino = './publico/imagens/' . $_FILES['imagem']['name'];
+                $imagem_tmp = $_FILES['imagem']['tmp_name'];
+                   
+                move_uploaded_file( $imagem_tmp, $destino );
+               
+                
             if (count($errors)> 0){
                 $dados = array();
                 $dados["errors"] = $errors;
                 $dados["categorias"] = pegarTodosCategorias();
                 exibir ("produtos/formulario", $dados);
             }else {
-                $msg = adicionarProduto($nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $imagem, $estoque_minimo, $estoque_maximmo );
+                $msg = adicionarProduto($nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $destino, $estoque_minimo, $estoque_maximmo );
                 echo $msg;
             }
             
@@ -82,11 +86,16 @@ function editar($idproduto){
         $preco = $_POST ["preco"];
 	$descricao = $_POST["descricao"];
         $tamanho = $_POST["tamanho"];
-        $imagem = $_POST["imagem"];
+        $imagem = $_FILES["imagem"];
         $estoque_minimo = $_POST ["estoque_minimo"];
         $estoque_maximmo = $_POST ["estoque_maximmo"];
         
-        editarProduto($idproduto, $nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $imagem, $estoque_minimo, $estoque_maximmo);
+         $destino = './publico/imagens/' . $_FILES['imagem']['name'];
+         $imagem_tmp = $_FILES['imagem']['tmp_name'];
+                   
+         move_uploaded_file( $imagem_tmp, $destino );
+        
+        editarProduto($idproduto, $nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $destino, $estoque_minimo, $estoque_maximmo);
         redirecionar ("produto/listar");
     }else {
         $dados["categorias"] = pegarTodasCategorias();

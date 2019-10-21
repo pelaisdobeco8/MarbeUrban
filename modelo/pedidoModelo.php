@@ -12,3 +12,19 @@ if(!$resultado) { die('Erro ao adicionar um pedido'. mysqli_error($cnx));}
 return 'Pedido salvo <br> <a href="./carrinho/index/" class="btn btn-primary">Voltar</a>';  
 }
 
+function pegarTodosCupons (){
+    $sql = "SELECT * FROM pedido";
+    $resultado = mysqli_query(conn(), $sql);
+    $pedidos = array();
+    while ($linha = mysqli_fetch_assoc($resultado)){
+        $pedidos[] = $linha;
+    }
+    return $pedidos; 
+}
+
+function pegarCupomPorId ($idpedido) {
+    $sql = "SELECT * FROM pedido WHERE idpedido = $idpedido";
+    $resultado = mysqli_query(conn(), $sql);
+    $pedidos = mysqli_fetch_assoc($resultado);
+    return $pedidos;
+}

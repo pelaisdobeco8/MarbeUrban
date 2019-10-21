@@ -26,7 +26,7 @@
         <td><?=$produto['preco']?></td>
         <td><?=$produto['descricao']?></td>
         <td><?=$produto['tamanho']?></td>
-        <td><?=$produto['imagem']?></td>
+        <td><img src="<?=$produto['imagem']?>" alt="imagem" width="10%"></td>
         <td><?=$produto['estoque_minimo']?></td>
         <td><?=$produto['estoque_maximmo']?></td>  
         <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/ver/<?=$produto['idproduto']?>">Ver</a> <?php } ?></td>
@@ -37,5 +37,6 @@
     </tr>
     <?php endforeach; ?>
 </table>
+
 
 <a href="./produto/adicionar/" class="btn btn-primary">Novo produto</a>

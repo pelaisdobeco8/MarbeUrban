@@ -6,6 +6,6 @@
 <p>Preço: <?=$produtos['preco']?></p>
 <p>Descrição: <?=$produtos['descricao']?></p>
 <p>Tamanho: <?=$produtos['tamanho']?></p>
-<p>Imagem: <?=$produtos['imagem']?></p>
+<p>Imagem: <br> <img src="<?=$produtos['imagem']?>" alt="imagem" width="15%"></p>
 <p>Estoque mínimo: <?=$produtos['estoque_minimo']?></p>
 <p>Estoque máximo : <?=$produtos['estoque_maximmo']?></p>

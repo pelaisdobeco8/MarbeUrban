@@ -2,7 +2,7 @@
     <head>
         <title>MarbeUrban</title>
         <meta charset="utf-8">
-        <link rel="icon" href="publico/imagens/cabide.png" type="image/x-icon"/>
+        <link rel="icon" href="./publico/imagens/cabide.png" type="image/x-icon"/>
         <base href="<?= URL_BASE ?>"><!--Esta instrução é super importante e não deve ser mudada!-->
         <link rel="stylesheet" href="./publico/css/app.css">
         
