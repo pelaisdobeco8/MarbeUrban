@@ -3,7 +3,7 @@
 function salvar () {
     if (ehPost ()) {
         $idFormaPagamento = $_POST["idFormaPagamento"];
-        $idusuario = $_POST["idusuario"];
+        $idusuario = $_SESSION["idusuario"];
         $idendereco = $_POST["idendereco"];
         $valorcupom = $_POST["valorcupom"];
         $produtosCarrinho = $_SESSION["carrinho"];   
@@ -13,17 +13,17 @@ function salvar () {
     }else{
         
     }
-    exibir ("pedido/formulario");
+    exibir("pedidos/listar");
     
-}
-
-function ver ($idpedido) {
-    $dados["pedidos"] = pegarPedidoPorId($idpedido);
-    exibir ("pedido/visualizar" , $dados);
 }
 
 function listar () {
     $dados = array ();
     $dados["pedidos"] = pegarTodosPedidos();
-    exibir ("pedido/listar", $dados);
+    exibir ("pedidos/listar", $dados);
+}
+
+function ver ($idpedido) {
+    $dados["pedidos"] = pegarPedidoPorId($idpedido);
+    exibir ("pedidos/visualizar" , $dados);
 }

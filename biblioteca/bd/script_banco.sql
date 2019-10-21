@@ -89,3 +89,10 @@ FOREIGN KEY (idFormaPagamento) REFERENCES FormaPagamento(idFormaPagamento) ON DE
 ON UPDATE CASCADE
 );
 
+CREATE TABLE pedido_produto (
+idproduto INT(11) NOT NULL,
+idpedido INT(11) NOT NULL,
+quantidade INTEGER NOT NULL,
+PRIMARY KEY (idproduto, idpedido)
+);
+
