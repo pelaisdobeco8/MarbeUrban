@@ -16,7 +16,7 @@ return 'Pedido salvo <br> <a href="./carrinho/index/" class="btn btn-primary">Vo
 }
 
 function pegarTodosPedidos (){
-    $sql = "SELECT * FROM prdido";
+    $sql = "SELECT * FROM pedido ";
     $resultado = mysqli_query(conn(), $sql);
     $pedidos = array();
     while ($linha = mysqli_fetch_assoc($resultado)){

@@ -53,5 +53,5 @@
             <h2 class="letrasdesc">TOTAL DA COMPRA: <span class="price"><b>R$ <?= $total ?></b></span></h2>
 	</div>
 
-    <a href="#"><button id="finalizabotao" type="submit"><strong>FINALIZAR COMPRA</strong></button></a>
+    <a href="./pedido/salvar"><button id="finalizabotao" type="submit"><strong>FINALIZAR COMPRA</strong></button></a>
 </div>
