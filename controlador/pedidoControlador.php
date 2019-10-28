@@ -1,5 +1,9 @@
 <?php
 
+require_once "modelo/pedidoModelo.php";
+require_once "modelo/formaPagamentoModelo.php";
+require_once "modelo/enderecoModelo.php";
+
 function salvar () {
     if (ehPost ()) {
         $idFormaPagamento = $_POST["idFormaPagamento"];
@@ -10,10 +14,15 @@ function salvar () {
         
         $msg = adicionarPedido($idFormaPagamento, $idusuario, $idendereco, $valorcupom, $produtosCarrinho);
         echo $msg;
-    }else{
+    
         
+    }else{
+        $dados = array();
+        $dados["pagamentos"] = pegarTodosPagamentos();
+        // $dados["enderecos"] = pegarEnderecoPorId();
+        exibir("pedidos/formulario", $dados);
     }
-    exibir("pedidos/listar");
+    
     
 }
 

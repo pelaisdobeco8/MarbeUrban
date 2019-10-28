@@ -1,6 +1,7 @@
 <?php
 
 require_once "modelo/cupomModelo.php";
+require_once 'modelo/produtoModelo.php';
 
 /** admin */
 function adicionar () {
@@ -47,5 +48,32 @@ function editar ($idcupom) {
     }else {
         $dados["cupons"] = pegarCupomPorId ($idcupom);
         exibir ("cupom/formulario", $dados);
+    }
+}
+
+function desconto ($soma) {
+    if (ehPost()) {
+        $desconto =  pegarCupomPorNome ($_POST["desconto"]);
+             
+        $soma= $soma - $desconto;
+        $dados["produtos"] = $_SESSION["carrinho"];
+        $dados["total"] = $soma;
+    }
+
+     $_SESSION["quantcarrinho"]=0;
+    if (isset($_SESSION["carrinho"])) {
+        $produtosCarrinho = array();
+        $soma=0;
+        foreach ($_SESSION["carrinho"] as $produtoSessao) {
+            $_SESSION["quantcarrinho"]+= $produtoSessao["quantidade"];
+            $produtoBanco = pegarProdutoPorId($produtoSessao["id"]);
+            $produtosCarrinho[] = $produtoBanco; 
+        }
+        
+        $dados["produtos"] = $produtosCarrinho;
+        exibir("carrinho/carrinho", $dados);
+        
+    } else {
+        exibir("carrinho/carrinho");
     }
 }

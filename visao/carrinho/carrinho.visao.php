@@ -35,10 +35,12 @@
 <div id="comprafinal">
     <h1 class="letrasdesc">RESUMO DA COMPRA</h1>
 					
-        <div id="cupom">
+         <div id="cupom">
             <h2 class="letrasdesc">CUPOM DE DESCONTO</h2>
-            <input class="formspace"/>
-            <a href="#"><button class="botao" type="submit"><strong>CALCULAR</strong></button></a>
+            <form action="cupom/desconto/<?= $total ?>" method="POST"> 
+             <input class="formspace" name="desconto"/>
+            <button class="botao" type="submit" <strong>CALCULAR</strong></button>
+            </form>
         </div>
 					
 	<div class="frete">
