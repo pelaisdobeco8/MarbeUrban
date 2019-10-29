@@ -1,4 +1,4 @@
-<h2>Listar Usuarios</h2>
+<h2> Usuarios</h2>
 
 <table class="table" border="1">
     <thead>

@@ -34,6 +34,11 @@ function ver ($idendereco){
     exibir ("endereco/visualizar" , $dados);
 }
 
+function verusuario ($idusuario) {
+    $dados["enderecos"] = pegarEnderecoPorIdUsuario($idusuario);
+    exibir ("endereco/visualizar" , $dados);
+}
+
 /** anon */
 function deletar ($idendereco){
     $msg = deletarEndereco($idendereco);

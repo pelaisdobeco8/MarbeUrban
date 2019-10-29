@@ -1,10 +1,11 @@
 
 <h2>Carrinho</h2>
 
-<table class="table">
+<table class="table" border="1">
     <thead>
         <tr>
             <th>Produto</th>
+            <th>Imagem</th>
             <th>Preço</th>
             <th>Tamanho</th>
              <th>Descrição</th>
@@ -17,6 +18,7 @@
     <?php ($produtos); foreach($produtos as $produto): ?>
     <tr>
         <td><?=$produto['nomeproduto']?></td>
+        <td><img src="<?=$produto['imagem']?>" alt="imagem" width="10%"></td>
         <td><?=$produto['preco']?></td>
         <td><?=$produto['tamanho']?></td>
         <td><?=$produto['descricao']?></td>

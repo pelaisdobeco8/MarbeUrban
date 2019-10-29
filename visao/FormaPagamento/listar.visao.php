@@ -1,4 +1,4 @@
-<h2>Listar Formas de Pagamento</h2>
+<h2> Formas de Pagamento</h2>
 
 <table class="table" border="1">
     <thead>
