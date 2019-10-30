@@ -5,7 +5,7 @@ $sql = "INSERT INTO pedido (idFormaPagamento, idusuario, idendereco, valorcupom)
 $resultado = mysqli_query ($cnx = conn(), $sql);
 $idpedido = mysqli_insert_id($cnx);
 foreach ($produtosCarrinho as $produtos) {
-    $idproduto = $produtos["idproduto"];
+    $idproduto = $produtos["id"];
     $quantidade = 1;
     
     $sql = "INSERT INTO pedido_produto (idproduto, idpedido, quantidade) VALUES ('$idproduto', '$idpedido', '$quantidade')";

@@ -3,23 +3,39 @@
 require_once "modelo/pedidoModelo.php";
 require_once "modelo/formaPagamentoModelo.php";
 require_once "modelo/enderecoModelo.php";
+require_once "modelo/produtoModelo.php";
 
 function salvar () {
     if (ehPost ()) {
         $idFormaPagamento = $_POST["idFormaPagamento"];
-        $idusuario = $_SESSION["idusuario"];
+        $idusuario = acessoPegarUsuarioLogado();
         $idendereco = $_POST["idendereco"];
-        $valorcupom = $_POST["valorcupom"];
+        $valorcupom = $_SESSION["desconto"];
         $produtosCarrinho = $_SESSION["carrinho"];   
+     
         
         $msg = salvarPedido($idFormaPagamento, $idusuario, $idendereco, $valorcupom, $produtosCarrinho);
         echo $msg;
-    
         
     }else{
-        $dados = array();
-        $dados["pagamentos"] = pegarTodosPagamentos();
+        $_SESSION["quantcarrinho"]=0;
+        if (isset($_SESSION["carrinho"])) {
+            $produtosCarrinho = array();
+            $soma=0;
+            foreach ($_SESSION["carrinho"] as $produtoSessao) {
+                $_SESSION["quantcarrinho"]+= $produtoSessao["quantidade"];
+                $produtoBanco = pegarProdutoPorId($produtoSessao["id"]);
+                $produtosCarrinho[] = $produtoBanco; 
+                $aux= $produtoSessao["quantidade"]*$produtoBanco["preco"];
+                $soma= $soma + $aux;
+            }
+        
+            $dados["produtos"] = $produtosCarrinho;
+            $dados["total"] = $soma;
+     
+        }
         $chamar = acessoPegarUsuarioLogado();
+        $dados["pagamentos"] = pegarTodosPagamentos(); 
         $dados["enderecos"] = pegarEnderecoPorIdUsuario($chamar);
         exibir("pedidos/formulario", $dados);
     }

@@ -16,7 +16,7 @@
 
 <h3>Confira seus produtos</h3>
 
-<table class="table">
+<table class="table" border="1">
     <thead>
         <tr>
             <th>Produto</th>

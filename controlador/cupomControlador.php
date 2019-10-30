@@ -54,7 +54,7 @@ function editar ($idcupom) {
 function desconto ($soma) {
     if (ehPost()) {
         $desconto =  pegarCupomPorNome ($_POST["desconto"]);
-             
+        $_SESSION["desconto"] = $desconto;
         $soma= $soma - $desconto;
         $dados["produtos"] = $_SESSION["carrinho"];
         $dados["total"] = $soma;
