@@ -15,18 +15,14 @@
     </thead>
     
   
-    <?php ($produtos); foreach($produtos as $produto): ?>
+    <?php foreach($produtos as $produto): ?>
     <tr>
         <td><?=$produto['nomeproduto']?></td>
         <td><img src="<?=$produto['imagem']?>" alt="imagem" width="10%"></td>
         <td><?=$produto['preco']?></td>
         <td><?=$produto['tamanho']?></td>
         <td><?=$produto['descricao']?></td>
-        <td><a href="./carrinho/remover/<?=$produto["idproduto"];?>">Remover</a></td>
-        
-        
-         
-         
+        <td><a href="./carrinho/remover/<?=$produto["idproduto"];?>">Remover</a></td>     
     </tr>
     <?php endforeach; ?>
 </table>

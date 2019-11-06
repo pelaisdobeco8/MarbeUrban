@@ -50,6 +50,7 @@ function listar () {
 }
 
 function ver ($idpedido) {
+    $dados["pedidosProduto"] = pegarProdutoPorPedido($idpedido);
     $dados["pedidos"] = pegarPedidoPorId($idpedido);
     exibir ("pedidos/visualizar" , $dados);
 }

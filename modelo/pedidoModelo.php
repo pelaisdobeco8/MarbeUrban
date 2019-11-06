@@ -1,7 +1,7 @@
 <?php
 
 function salvarPedido ($idFormaPagamento, $idusuario, $idendereco, $valorcupom, $produtosCarrinho) {
-$sql = "INSERT INTO pedido (idFormaPagamento, idusuario, idendereco, valorcupom) VALUES ('$idFormaPagamento','$idusuario' '$idendereco', '$valorcupom')";
+$sql = "INSERT INTO pedido (idFormaPagamento, idusuario, idendereco, valorcupom) VALUES ($idFormaPagamento,$idusuario, $idendereco, $valorcupom)";
 $resultado = mysqli_query ($cnx = conn(), $sql);
 $idpedido = mysqli_insert_id($cnx);
 foreach ($produtosCarrinho as $produtos) {
@@ -16,7 +16,12 @@ return 'Pedido salvo <br> <a href="./carrinho/index/" class="btn btn-primary">Vo
 }
 
 function pegarTodosPedidos (){
-    $sql = "SELECT * FROM pedido";
+    $sql = "SELECT formaPagamento.descricao, endereco.logradouro, pedido.* 
+FROM pedido
+INNER JOIN formaPagamento
+ON pedido.idFormaPagamento = formaPagamento.idFormaPagamento
+INNER JOIN endereco
+ON pedido.idendereco = endereco.idendereco;";
     $resultado = mysqli_query(conn(), $sql);
     $pedidos = array();
     while ($linha = mysqli_fetch_assoc($resultado)){
@@ -32,4 +37,18 @@ function pegarPedidoPorId ($idpedido) {
     return $pedidos;
 }
 
-
+function pegarProdutoPorPedido($id){
+    $sql = "SELECT pr.nomeproduto 
+FROM produtos pr 
+INNER JOIN pedido_produto pp 
+ON pr.idproduto = pp.idproduto 
+INNER JOIN pedido p 
+ON pp.idpedido = p.idpedido 
+WHERE p.idpedido = '$id'";
+    $resultado = mysqli_query(conn(), $sql);
+    $pedidos = array();
+    while ($linha = mysqli_fetch_assoc($resultado)) {
+        $pedidos[] = $linha;
+    }
+    return $pedidos;
+}
