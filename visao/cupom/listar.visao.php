@@ -1,6 +1,7 @@
+<link rel="stylesheet" href="./publico/css/app.css">
 <h2>Cupons</h2>
 
-<table class="table" border="1">
+<table class="table">
     <thead>
         <tr>
             <th>Nome</th>
@@ -15,11 +16,11 @@
     <tr>
         <td><?=$cupom['nomecupom']?></td>
         <td><?=$cupom['desconto']?></td> 
-        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./cupom/ver/<?=$cupom['idcupom']?>">Ver</a> <?php } ?></td>
-        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?><a href="./cupom/editar/<?=$cupom['idcupom']?>">Editar</a> <?php } ?></td>
-        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?><a href="./cupom/deletar/<?=$cupom['idcupom']?>">Deletar</a> <?php } ?></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./cupom/ver/<?=$cupom['idcupom']?>"><button class="bot" type="submit" <strong>DETALHAR</strong></button></a> <?php } ?></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?><a href="./cupom/editar/<?=$cupom['idcupom']?>"><button class="bot" type="submit" <strong>EDITAR</strong></button></a> <?php } ?></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?><a href="./cupom/deletar/<?=$cupom['idcupom']?>"><button class="bot" type="submit" <strong>DELETAR</strong></button></a> <?php } ?></td>
     </tr>
     <?php endforeach; ?>
 </table>
-<a href="./cupom/adicionar/" class="btn btn-primary">Novo cupom</a>
+<br><br><a href="./cupom/adicionar/" class="btn btn-primary"><button class="botc" type="submit" <strong>CADASTRAR OUTRO</strong></button></a>
 

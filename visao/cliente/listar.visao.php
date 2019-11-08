@@ -1,6 +1,7 @@
+<link rel="stylesheet" href="./publico/css/app.css">
 <h2> Usuarios</h2>
 
-<table class="table" border="1">
+<table class="table">
     <thead>
         <tr>
             <th>Nome</th>
@@ -23,9 +24,9 @@
         <td><?=$usuario['cpf']?></td>
         <td><?=$usuario['datadenascimento']?></td>
         <td><?=$usuario['sexo']?></td>
-        <td>  <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./cliente/ver/<?=$usuario['idusuario']?>">Ver</a> <?php } ?> </td>
-        <td><a href="./cliente/editar/<?=$usuario['idusuario']?>">Editar</a></td>
-        <td>  <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./cliente/deletar/<?=$usuario['idusuario']?>">Deletar</a> <?php } ?></td>
+        <td>  <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./cliente/ver/<?=$usuario['idusuario']?>"><button class="bot" type="submit" <strong>DETALHAR</strong></button></a> <?php } ?> </td>
+        <td><a href="./cliente/editar/<?=$usuario['idusuario']?>"><button class="bot" type="submit" <strong>EDITAR</strong></button></a></td>
+        <td>  <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./cliente/deletar/<?=$usuario['idusuario']?>"><button class="bot" type="submit" <strong>DELETAR</strong></button></a> <?php } ?></td>
     </tr>
     <?php endforeach; ?>
 </table>

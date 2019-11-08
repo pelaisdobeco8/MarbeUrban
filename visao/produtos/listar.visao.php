@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="./publico/css/app.css">
 <h2>Listar Produtos</h2>
 
 <table class="table" border="1">
@@ -29,9 +30,9 @@
         <td><img src="<?=$produto['imagem']?>" alt="imagem" width="10%"></td>
         <td><?=$produto['estoque_minimo']?></td>
         <td><?=$produto['estoque_maximmo']?></td>  
-        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/ver/<?=$produto['idproduto']?>">Ver</a> <?php } ?></td>
-        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/editar/<?=$produto['idproduto']?>">Editar</a> <?php } ?></td>
-        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/deletar/<?=$produto['idproduto']?>">Remover</a> <?php } ?></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/ver/<?=$produto['idproduto']?>"><button class="bot" type="submit" <strong>DETALHAR</strong></button></a> <?php } ?></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/editar/<?=$produto['idproduto']?>"><button class="bot" type="submit" <strong>EDITAR</strong></button></a> <?php } ?></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/deletar/<?=$produto['idproduto']?>"><button class="bot" type="submit" <strong>DELETAR</strong></button></a> <?php } ?></td>
         <td> <a href="./carrinho/adicionar/<?=$produto['idproduto']?>"> Comprar</a></td>
         
     </tr>
@@ -39,4 +40,4 @@
 </table>
 
 
-<a href="./produto/adicionar/" class="btn btn-primary">Novo produto</a>
+<br><br><a href="./produto/adicionar/" class="btn btn-primary"><button class="botc" type="submit" <strong>CADASTRAR OUTRO</strong></button></a>

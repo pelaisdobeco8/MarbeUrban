@@ -49,7 +49,7 @@ function adicionar () {
                 exibir ("produtos/formulario", $dados);
             }else {
                 $msg = adicionarProduto($nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $destino, $estoque_minimo, $estoque_maximmo );
-                echo $msg;
+                redirecionar ("paginas/index");
             }
             
         }else {

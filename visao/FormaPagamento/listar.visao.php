@@ -1,6 +1,8 @@
+<link rel="stylesheet" href="./publico/css/app.css">
+
 <h2> Formas de Pagamento</h2>
 
-<table class="table" border="1">
+<table class="table">
     <thead>
         <tr>
             <th>Descrição</th>
@@ -14,11 +16,11 @@
     <?php foreach ($pagamentos as $pagamento): ?>
     <tr>
         <td><?=$pagamento['descricao']?></td>
-        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?>  <a href="./FormaPagamento/ver/<?=$pagamento['idFormaPagamento']?>">Ver</a> <?php } ?></td>
-        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?>  <a href="./FormaPagamento/editar/<?=$pagamento['idFormaPagamento']?>">Editar</a> <?php } ?></td>
-        <td><?php if (acessoPegarPapelDoUsuario() == 'admin') {?>  <a href="./FormaPagamento/deletar/<?=$pagamento['idFormaPagamento']?>">Deletar</a> <?php } ?></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?>  <a href="./FormaPagamento/ver/<?=$pagamento['idFormaPagamento']?>"><button class="bot" type="submit" <strong>DETALHAR</strong></button></a> <?php } ?></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?>  <a href="./FormaPagamento/editar/<?=$pagamento['idFormaPagamento']?>"><button class="bot" type="submit" <strong>EDITAR</strong></button></a> <?php } ?></td>
+        <td><?php if (acessoPegarPapelDoUsuario() == 'admin') {?>  <a href="./FormaPagamento/deletar/<?=$pagamento['idFormaPagamento']?>"><button class="bot" type="submit" <strong>DELETAR</strong></button></a> <?php } ?></td>
     </tr>
     <?php endforeach; ?>
 </table>
-<a href="./FormaPagamento/adicionar/" class="btn btn-primary">Nova forma de pagamento</a>
+<br><br><a href="./FormaPagamento/adicionar/" class="btn btn-primary"><button class="botc" type="submit" <strong>CADASTRAR OUTRA</strong></button></a>
 

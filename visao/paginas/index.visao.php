@@ -33,6 +33,11 @@
     <br>     <br>        <br>
 
     <div id="r3">
+        <?php foreach ($produtos as $produto):?>
+            <a href="produto/ver/<?=$produto['idproduto']?>">
+                <img id="roupa1" src="<?=$produto['imagem']?>" onMouseOver="this.src = '<?=produto['imagem']?>'" onMouseOut="this.src = '<?=produto['imagem']?>'" title="<?=produto['nomeproduto']?>">
+            </a>
+        <?php endforeach;?>
         <a href="#"><img id="roupa1"src="publico/imagens/modelo1.PNG"
                          onMouseOver="this.src = 'publico/imagens/modelo1.2.PNG'"
                          onMouseOut="this.src = 'publico/imagens/modelo1.PNG'"
@@ -48,6 +53,14 @@
                          onClick="location = '/MarbeUrban/descricao7.html'" title="MOLETOM FEMININO ROSA"></a>
     </div>
 
+    <?php foreach ($produtos as $produto): ?>
+    <div id="escritacompra">
+            <h3 class="nomemoletom"><strong><?=$produto['nomeproduto']?></strong></h3>
+            <h4>Por: <strong>3X</strong> de R$<?=$produto['preco']?></h4>
+            <p>no cartao MarbeUrban <strong>sem juros</strong></p>
+            <h4>ou: <strong>R$117,90</strong> a vista</h4>
+        </div>
+    <?php endforeach; ?>
     <div id="escritacompra">
         <h3 class="nomemoletom"><strong>Preppy Listrado Marinha</strong></h3>
         <h4>Por: <strong>3X</strong> de R$39,30</h4>

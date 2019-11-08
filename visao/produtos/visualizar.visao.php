@@ -1,4 +1,4 @@
-<h2>Ver detalhes do produto</h2>
+<h2>Detalhes do produto</h2>
 
 <p>Id: <?=$produtos['idproduto']?></p>
 <p>Categoria: <?=$produtos['id_categoria']?></p>

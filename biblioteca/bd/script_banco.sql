@@ -79,7 +79,6 @@ idendereco INT(11) NOT NULL,
 idusuario INT(11) NOT NULL,
 valorcupom VARCHAR(60),
 idFormaPagamento INT NOT NULL,
-datacompra DATE NOT NULL,
 PRIMARY KEY (idpedido),
 FOREIGN KEY (idusuario) REFERENCES usuario(idusuario) ON DELETE CASCADE 
 ON UPDATE CASCADE,

@@ -1,6 +1,7 @@
+<link rel="stylesheet" href="./publico/css/app.css">
 <h2>Endereços</h2>
 
-<table class="table" border="1">
+<table class="table">
     <thead>
         <tr>
             <th>Logradouro</th>
@@ -23,9 +24,9 @@
         <td><?=$endereco['bairro']?></td>
         <td><?=$endereco['cidade']?></td>
         <td><?=$endereco['cep']?></td>
-        <td><a href="./endereco/ver/<?=$endereco['idendereco']?>">Ver</a></td>
-        <td><a href="./endereco/editar/<?=$endereco['idendereco']?>">Editar</a></td>
-        <td><a href="./endereco/deletar/<?=$endereco['idendereco']?>">Deletar</a></td>
+        <td><a href="./endereco/ver/<?=$endereco['idendereco']?>"><button class="bot" type="submit" <strong>DETALHAR</strong></button></a></td>
+        <td><a href="./endereco/editar/<?=$endereco['idendereco']?>"><button class="bot" type="submit" <strong>EDITAR</strong></button></a></td>
+        <td><a href="./endereco/deletar/<?=$endereco['idendereco']?>"><button class="bot" type="submit" <strong>DELETAR</strong></button></a></td>
     </tr>
     <?php endforeach; ?>
 </table>

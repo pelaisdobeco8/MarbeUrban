@@ -1,4 +1,4 @@
-<h2>Ver detalhes do cliente</h2>
+<h2>Detalhes do cliente</h2>
 
 <p>Id: <?=$usuarios['idusuario']?></p>
 <p>Nome: <?=$usuarios['nomeusuario']?></p>

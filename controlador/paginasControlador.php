@@ -1,7 +1,6 @@
 <?php
 
-/* CONTROLADOR
- * funçao: controlar as páginas estáticas (páginas sem acesso ao modelo)  */
+require_once 'modelo/produtoModelo.php';
 
 function descri() {
     exibir("paginas/sobre");
@@ -12,5 +11,7 @@ function ilustrar () {
 }
 
 function index () {
-    exibir ("paginas/index");
+    $dados = array();
+    $dados['produtos'] = pegarTodosProdutos();
+    exibir ("paginas/index", $dados);
 }

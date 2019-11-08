@@ -22,7 +22,7 @@
         <td><?=$produto['preco']?></td>
         <td><?=$produto['tamanho']?></td>
         <td><?=$produto['descricao']?></td>
-        <td><a href="./carrinho/remover/<?=$produto["idproduto"];?>">Remover</a></td>     
+        <td><a href="./carrinho/remover/<?=$produto["idproduto"];?>"> <button class="bot" type="submit" <strong>REMOVER</strong></button></a></td>     
     </tr>
     <?php endforeach; ?>
 </table>

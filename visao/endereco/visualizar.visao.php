@@ -1,4 +1,4 @@
-<h2>Ver detalhes do Endereço</h2>
+<h2>Detalhes do Endereço</h2>
 
 <p>Id: <?=$enderecos['idendereco']?></p>
 <p>Logradouro: <?=$enderecos['logradouro']?></p>
