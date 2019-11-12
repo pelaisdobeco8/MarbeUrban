@@ -35,7 +35,7 @@
     <div id="r3">
         <?php foreach ($produtos as $produto):?>
             <a href="produto/ver/<?=$produto['idproduto']?>">
-                <img id="roupa1" src="<?=$produto['imagem']?>" onMouseOver="this.src = '<?=produto['imagem']?>'" onMouseOut="this.src = '<?=produto['imagem']?>'" title="<?=produto['nomeproduto']?>">
+                <img id="roupa1" src="<?=$produto['imagem']?>" onMouseOver="this.src = '<?=$produto['imagem']?>'" onMouseOut="this.src = '<?=$produto['imagem']?>'" title="<?=$produto['nomeproduto']?>">
             </a>
         <?php endforeach;?>
         <a href="#"><img id="roupa1"src="publico/imagens/modelo1.PNG"
