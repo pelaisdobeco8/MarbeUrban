@@ -1,6 +1,6 @@
 <?php
-function adicionarProduto ($nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $imagem, $estoque_minimo, $estoque_maximmo) {
-$sql = "INSERT INTO produtos (nomeproduto, id_categoria, preco, descricao, tamanho, imagem, estoque_minimo, estoque_maximmo) VALUES ('$nomeproduto', '$id_categoria', '$preco', '$descricao', '$tamanho', '$imagem', '$estoque_minimo', '$estoque_maximmo')"; 
+function adicionarProduto ($nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $imagem,$quantidade, $estoque_minimo, $estoque_maximmo) {
+$sql = "INSERT INTO produtos (nomeproduto, id_categoria, preco, descricao, tamanho, imagem, quantidade, estoque_minimo, estoque_maximmo) VALUES ('$nomeproduto', '$id_categoria', '$preco', '$descricao', '$tamanho', '$imagem', '$quantidade', '$estoque_minimo', '$estoque_maximmo')"; 
 $resultado = mysqli_query ($cnx = conn(), $sql);
 if(!$resultado) { die('Erro ao cadastrar produto'. mysqli_error($cnx));}
 return 'Produto cadastrado com sucesso! <br> <a href="./produto/adicionar/" class="btn btn-primary">Voltar</a>';   
@@ -32,8 +32,8 @@ function deletarProduto ($idproduto) {
     return 'Produto deletado com sucesso!';
 }
 
-function editarProduto($idproduto, $nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $imagem, $estoque_minimo, $estoque_maximmo) {
-    $sql  = "UPDATE produtos SET nomeproduto = '$nomeproduto', id_categoria = '$id_categoria', preco = '$preco', descricao = '$descricao', tamanho = '$tamanho', imagem = '$imagem', estoque_minimo = '$estoque_minimo', estoque_maximmo = '$estoque_maximmo' WHERE idproduto = $idproduto";
+function editarProduto($idproduto, $nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $imagem, $quantidade, $estoque_minimo, $estoque_maximmo) {
+    $sql  = "UPDATE produtos SET nomeproduto = '$nomeproduto', id_categoria = '$id_categoria', preco = '$preco', descricao = '$descricao', tamanho = '$tamanho', imagem = '$imagem', quantidade = '$quantidade', estoque_minimo = '$estoque_minimo', estoque_maximmo = '$estoque_maximmo' WHERE idproduto = $idproduto";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if (!$resultado) {
         die ('Erro ao alterar produto' . mysqli_error($cnx));

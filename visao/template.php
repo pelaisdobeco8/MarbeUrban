@@ -59,6 +59,7 @@
                 <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./endereco/listar"> Listar endereços </a> <?php } ?> </li>
                 <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./FormaPagamento/listar"> Listar Formas de Pagamento </a> <?php } ?> </li>
                 <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./pedido/listar"> Listar Pedidos </a> <?php } ?> </li>
+                 <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/listaradm"> Estoque </a> <?php } ?> </li>
                 </div>
             </ul>
         </div> <br><br><br>

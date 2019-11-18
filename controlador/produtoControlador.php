@@ -11,7 +11,7 @@ function adicionar () {
 		$preco = $_POST ["preco"];
 		$descricao = $_POST["descricao"];
                 $tamanho = $_POST["tamanho"];
-                
+                $quantidade = $_POST["quantidade"];
                 $estoque_minimo = $_POST ["estoque_minimo"];
                 $estoque_maximmo = $_POST ["estoque_maximmo"];
                 $errors = array();
@@ -27,6 +27,9 @@ function adicionar () {
                 }
                 if (strlen(trim($tamanho)) == 0){
                 $errors[] = "Você deve inserir o(s) tamanho(s) de seu produto";
+                }
+                 if (strlen(trim($quantidade)) == 0){
+                $errors[] = "Você deve inserir uma quantidade";
                 }
                 if (strlen(trim($estoque_minimo)) == 0){
                 $errors[] = "Você deve inserir a quantidade mínima no estoque";
@@ -48,7 +51,7 @@ function adicionar () {
                 $dados["categorias"] = pegarTodosCategorias();
                 exibir ("produtos/formulario", $dados);
             }else {
-                $msg = adicionarProduto($nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $destino, $estoque_minimo, $estoque_maximmo );
+                $msg = adicionarProduto($nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $destino,$quantidade, $estoque_minimo, $estoque_maximmo );
                 redirecionar ("paginas/index");
             }
             
@@ -87,6 +90,7 @@ function editar($idproduto){
 	$descricao = $_POST["descricao"];
         $tamanho = $_POST["tamanho"];
         $imagem = $_FILES["imagem"];
+        $quantidade = $_POST["quantidade"];
         $estoque_minimo = $_POST ["estoque_minimo"];
         $estoque_maximmo = $_POST ["estoque_maximmo"];
         
@@ -95,7 +99,7 @@ function editar($idproduto){
                    
          move_uploaded_file( $imagem_tmp, $destino );
         
-        editarProduto($idproduto, $nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $destino, $estoque_minimo, $estoque_maximmo);
+        editarProduto($idproduto, $nomeproduto, $id_categoria, $preco, $descricao, $tamanho, $destino, $quantidade, $estoque_minimo, $estoque_maximmo);
         redirecionar ("produto/listar");
     }else {
         $dados["categorias"] = pegarTodasCategorias();
@@ -115,5 +119,9 @@ function buscar(){
 		
 	}
 }
-
-
+/** anon */
+function listaradm () {
+    $dados = array ();
+    $dados["produtos"] = pegarTodosProdutos();
+    exibir ("produtos/listaradm", $dados);
+}

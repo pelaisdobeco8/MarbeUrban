@@ -189,7 +189,7 @@
 	align-items: center;
 	background-color: white;
 	width: 80%;
-	margin-left: 10%;
+	margin-left: 6%;
 	padding-bottom: 5%;
 }
 
@@ -310,8 +310,13 @@
 }
 
 #escritacompra {
+        display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
 	border: solid;
-	border-color: white;
+	border-color: black;
 	width: 22%;
 	height: 200px;
 	margin-left: 12%;
@@ -326,45 +331,6 @@
 	height: 196px;
 	margin-left: 39%;
 	margin-top: -210px;
-	background-color: white;
-}
-
-#escritacompra3 {
-	border: solid;
-	border-color: white;
-	width: 22%;
-	margin-left: 66%;
-	margin-top: -200px;
-	background-color: white;
-}
-
-#escritacompra4 {
-	border: solid;
-	border-color: white;
-	margin-left: 12%;
-	margin-top: -5%;
-	width: 22%;
-	height: 200px;
-	background-color: white;
-}
-
-#escritacompra5 {
-	border: solid;
-	border-color: white;
-	margin-left: 39%;
-	margin-top: -210px;
-	width: 22%;
-	height: 200px;
-	background-color: white;
-}
-
-#escritacompra6 {
-	border: solid;
-	border-color: white;
-	margin-left: 66%;
-	margin-top: -203px;
-	width: 22%;
-	height: 200px;
 	background-color: white;
 }
 
