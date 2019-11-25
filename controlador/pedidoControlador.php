@@ -37,6 +37,9 @@ function salvar () {
         $chamar = acessoPegarUsuarioLogado();
         $dados["pagamentos"] = pegarTodosPagamentos(); 
         $dados["enderecos"] = pegarEnderecoPorIdUsuario($chamar);
+        $desconto = $_SESSION["desconto"];
+        $dados["soma"] = $soma - $desconto;
+        $dados["desconto"] = $desconto;
         exibir("pedidos/formulario", $dados);
     }
     

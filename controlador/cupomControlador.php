@@ -71,6 +71,7 @@ function desconto ($soma) {
         }
         
         $dados["produtos"] = $produtosCarrinho;
+      
         exibir("carrinho/carrinho", $dados);
         
     } else {

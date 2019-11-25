@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="./publico/css/app.css">
-<h2>Estoque de produtos</h2>
+<h2>Produtos po categoria</h2>
 
 <table class="table">
     <thead>
         <tr>
             <th>Produto</th>
-            <th>Estoque</th>
+            <th>Categoria</th>
            
         </tr>
     </thead>
@@ -16,7 +16,5 @@
     </tr>
     <?php endforeach; ?>
 </table>
-
-
 
 

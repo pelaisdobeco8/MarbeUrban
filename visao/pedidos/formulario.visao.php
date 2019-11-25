@@ -45,6 +45,9 @@
     </tr>
     <?php endforeach; ?>
 </table>
+<h3 class="letrasdesc">TOTAL DA COMPRA: <span class="price"><b>R$ <?= $total ?></b></span></h3>
+<h3 class="letrasdesc">DESCONTO: <span class="price"><b>R$ <?= $desconto ?></b></span></h3>
+<h3 class="letrasdesc">TOTAL COM DESCONTO: <span class="price"><b>R$ <?= $soma ?></b></span></h3>
 
    <br><br><button type="submit">Pronto</button>
 </form>

@@ -40,6 +40,7 @@
             </a>
         <?php endforeach;?>
     </div>
+    
     <div id="escritacompra">
         <?php foreach ($produtos as $produto): ?>
             <h3 class="nomemoletom"><strong><?=$produto['nomeproduto']?></strong></h3>
@@ -49,10 +50,6 @@
         <?php endforeach; ?>
     </div>
     
-    <div id="r6">
-        
-    </div>
-
     <div id="escritacompra2">
         
     </div>

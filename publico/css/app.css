@@ -313,15 +313,12 @@
         display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
-	border: solid;
-	border-color: black;
-	width: 22%;
-	height: 200px;
-	margin-left: 12%;
-	margin-top: -5%;
-	background-color: white;
+	background-color: red;
+	width: 80%;
+	margin-left: 6%;
+	padding-bottom: 5%;
 }
 
 #escritacompra2 {
