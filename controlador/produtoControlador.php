@@ -119,15 +119,4 @@ function buscar(){
 		
 	}
 }
-/** anon */
-function listaradm () {
-    $dados = array ();
-    $dados["produtos"] = pegarTodosProdutos();
-    exibir ("produtos/listaradm", $dados);
-}
 
-function pegarcategoria () {
-    $dados = array ();
-    $dados["categorias"] = pegarProdutoPorCategoria($idcategoria);
-    exibir ("produtos/listarcategoria", $dados);   
-}

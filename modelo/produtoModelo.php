@@ -51,3 +51,13 @@ function buscarProduto ($buscar){
 
 	return $produtos;
 }
+
+function pegarProdutoPorCategoria () {
+    $sql = "SELECT nomeproduto.produto, descricao.categoria FROM produtos 
+    INNER JOIN categoria
+    ON idcategoria.produtos = idcategoria.categoria
+    ORDER BY descricao.categoria";
+    $resultado = mysqli_query(conn(), $sql);
+    $produtos = mysqli_fetch_assoc($resultado);
+    return $produtos;
+}

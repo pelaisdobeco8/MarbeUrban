@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./publico/css/carrinho.css">
+
 <h3>Selecione uma forma de pagamento: </h3>
 
 <form action="" method="POST">
@@ -49,5 +51,5 @@
 <h3 class="letrasdesc">DESCONTO: <span class="price"><b>R$ <?= $desconto ?></b></span></h3>
 <h3 class="letrasdesc">TOTAL COM DESCONTO: <span class="price"><b>R$ <?= $soma ?></b></span></h3>
 
-   <br><br><button type="submit">Pronto</button>
+   <br><br><button id="finalizabotao" type="submit">FINALIZAR COMPRA</button>
 </form>

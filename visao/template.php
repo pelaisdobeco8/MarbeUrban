@@ -41,7 +41,7 @@
 		<li> <a href="#" title="Produtos"> Produtos</a> </li> 
 		<li> <a href="./cliente/adicionar/" class="btn btn-primary" title="Cadastre-se"> Cadastre-se </a> </li> 
 		<li> <a href="./carrinho/" title="Carrinho"> Carrinho </a> </li>	
-		<li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="#" title="Administrador"> Administrador </a> <?php } ?> </li>
+		<li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./adm/" title="Administrador"> Administrador </a> <?php } ?> </li>
                 <li> <?php if (acessoPegarPapelDoUsuario() == 'user') {?> <a href="cliente/ver/<?=acessoPegarUsuarioLogado();?>" title="Minha Conta"> Minha Conta </a> <?php } ?> </li>
                 
                 </div>
@@ -59,7 +59,6 @@
                 <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./endereco/listar"> Listar endereços </a> <?php } ?> </li>
                 <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./FormaPagamento/listar"> Listar Formas de Pagamento </a> <?php } ?> </li>
                 <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./pedido/listar"> Listar Pedidos </a> <?php } ?> </li>
-                 <li> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/listaradm"> Estoque </a> <?php } ?> </li>
                 </div>
             </ul>
         </div> <br><br><br>
