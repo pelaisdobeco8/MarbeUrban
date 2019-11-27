@@ -20,5 +20,18 @@ function pegarCategoria () {
     exibir ("adm/listarcategoria", $dados);   
 }
 
+function listarPedidosPorData() {
+	if (ehPost()){
+		$datad1 = $_POST ['datad1'];
+		$datad2= $_POST ['datad2'];
+		$dados = array();
+		$dados["adm"] = pegarTodosPedidosData($datad1, $datad2); 
+		exibir("administrador/listarData", $dados);
+	}else{
+		exibir("administrador/Data");
+	} 
+}
+
+
 
 

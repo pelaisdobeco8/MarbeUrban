@@ -79,6 +79,7 @@ idpedido INT(11) NOT NULL AUTO_INCREMENT,
 idendereco INT(11) NOT NULL,
 idusuario INT(11) NOT NULL,
 valorcupom VARCHAR(60),
+datacompra DATE NOT NULL,
 idFormaPagamento INT NOT NULL,
 PRIMARY KEY (idpedido),
 FOREIGN KEY (idusuario) REFERENCES usuario(idusuario) ON DELETE CASCADE 
@@ -96,3 +97,5 @@ quantidade INTEGER NOT NULL,
 PRIMARY KEY (idproduto, idpedido)
 );
 
+INSERT INTO usuario (nomeusuario, email, senha, cpf, datadenascimento, sexo, tipousuario) 
+VALUES ('Beatriz','msndabia@hotmail.com','12345','45729432810','18/01/2003','F','admin');

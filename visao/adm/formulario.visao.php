@@ -5,10 +5,10 @@
     
     <body>	
         <div id="opadm">
-            <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./adm/listaradm"> ESTOQUE</a> <?php } ?> 
-            <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./adm/pegarcategoria"> PRODUTOS POR CATEGORIA </a> <?php } ?>
-            <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./adm/pegarcategoria"> DATAS </a> <?php } ?>
-            <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./adm/pegarcategoria"> FATURAMENTO </a> <?php } ?>
+            <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./adm/listaradm"> <button class="botadm" type="submit" <strong>ESTOQUE</strong></button></a> <?php } ?></td> <br><br>
+            <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./adm/pegarcategoria"> <button class="botadm" type="submit" <strong>CATEGORIAS</strong></button></a> <?php } ?></td> <br><br>
+            <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./adm/pegarcategoria"> <button class="botadm" type="submit" <strong>DATAS DE COMPRAS</strong></button></a> <?php } ?></td> <br><br>
+            <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./adm/pegarcategoria"> <button class="botadm" type="submit" <strong>FATURAMENTO</strong></button></a> <?php } ?></td>
         </div>  
     </body>
 </html>

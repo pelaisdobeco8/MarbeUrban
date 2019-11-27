@@ -358,3 +358,17 @@
     font-size: 18px;
        
 }
+
+.botadm {
+    font-family: courier new;
+    background-color: black;
+    border-width: 01%;
+    border:black solid 2px;
+    border-radius: 6%;
+    width: 10%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+       
+}
