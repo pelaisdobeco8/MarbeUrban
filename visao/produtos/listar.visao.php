@@ -33,7 +33,7 @@
         <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/ver/<?=$produto['idproduto']?>"><button class="bot" type="submit" <strong>DETALHAR</strong></button></a> <?php } ?></td>
         <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/editar/<?=$produto['idproduto']?>"><button class="bot" type="submit" <strong>EDITAR</strong></button></a> <?php } ?></td>
         <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./produto/deletar/<?=$produto['idproduto']?>"><button class="bot" type="submit" <strong>DELETAR</strong></button></a> <?php } ?></td>
-        <td> <a href="./carrinho/adicionar/<?=$produto['idproduto']?>"> Comprar</a></td>
+        <td> <a href="./carrinho/adicionar/<?=$produto['idproduto']?>"><button class="bot" type="submit" <strong>COMPRAR</strong></button></a></td>
         
     </tr>
     <?php endforeach; ?>

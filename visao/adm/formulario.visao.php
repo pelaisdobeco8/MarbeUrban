@@ -9,10 +9,6 @@
             <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./adm/pegarcategoria"> PRODUTOS POR CATEGORIA </a> <?php } ?>
             <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./adm/pegarcategoria"> DATAS </a> <?php } ?>
             <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./adm/pegarcategoria"> FATURAMENTO </a> <?php } ?>
-        </div>
-       
-    
-    
-    
+        </div>  
     </body>
 </html>

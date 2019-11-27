@@ -9,10 +9,10 @@
            
         </tr>
     </thead>
-    <?php foreach ($produtos as $produto): ?>
+    <?php foreach ($categorias as $categoria): ?>
     <tr>
-        <td><?=$produto['nomeproduto']?></td>
-        <td><?=$produto['idcategoria']?></td>
+        <td><?=$categoria['nomeproduto']?></td>
+        <td><?=$categoria['nomecategoria']?></td>
     </tr>
     <?php endforeach; ?>
 </table>

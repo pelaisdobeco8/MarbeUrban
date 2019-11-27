@@ -14,7 +14,7 @@ function listaradm () {
     exibir ("adm/listaradm", $dados);
 }
 
-function pegarcategoria () {
+function pegarCategoria () {
     $dados = array ();
     $dados["categorias"] = pegarProdutoPorCategoria();
     exibir ("adm/listarcategoria", $dados);   
