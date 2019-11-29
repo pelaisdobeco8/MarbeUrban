@@ -1,6 +1,6 @@
 <h2> Listar Pedidos: </h2>
 
-<table class="table" border="1">
+<table class="table">
     <thead>
         <tr>
             <th>CPF</th>

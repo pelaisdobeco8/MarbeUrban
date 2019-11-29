@@ -19,7 +19,6 @@
     <input type="radio" name="sexo" value="F"> Feminino
     <input type="radio" name="sexo" value="O"> Outro <br><br>
     
-    <input type="radio" name="tipousuario" value="admin"> Administrador
     <input type="radio" name="tipousuario" value="user"> Usuário
     
 	<br><br><button type="submit">Cadastrar</button>

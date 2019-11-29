@@ -12,7 +12,7 @@ if (ehPOST()) {
     <input type="date" class="caixaEntraInfo" name="data1"><br><br>
     <label for="data2">Segunda data:</label>
     <input type="date" class="caixaEntraInfo" name="data2"><br><br>
-    <button class="botao">Enviar</button>
+    <button class="botc">Enviar</button>
 </form>
-<a href="cliente/adm"><button class="botao">Voltar</button></a><br><br>
+<a href="cliente/adm"><button class="botc">Voltar</button></a><br><br>
 

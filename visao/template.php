@@ -20,7 +20,7 @@
 			
             <div id="icons">
                 <form method="POST" action="produto/buscar" id="pesquisa">
-                <input type="text" name="busca" placeholder="pesquisa"> 
+                <input id="pesq" type="text" name="busca" placeholder="PESQUISAR :)"> 
                 </form>
                 <a href="#"> <img src="publico/imagens/lupa.jpg" width="50px" title="Pesquisar" id="lupa"> </a>
                 <a href="./login/index/"> <img src="publico/imagens/rostinho.png" width="50px" title="Login" id="rosto"> </a>

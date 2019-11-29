@@ -84,7 +84,7 @@
 	justify-content: space-around;
 	align-items: center;
 	background-color: white;
-	width: 75%;
+	width: 82%;
 	height: 60px;	
 	font-size: 20px;
 	color: white;
@@ -366,9 +366,22 @@
     border:black solid 2px;
     border-radius: 6%;
     width: 10%;
-    height: 30px;
+    height: 50px;
     text-align: center;
     color: white;
     font-size: 14px;
        
+}
+
+#pesquisa {
+    margin-top: 1.5%;
+    
+}
+
+#pesq {
+    height: 30px;
+}
+
+.letrasdesc {
+    color: black;
 }
