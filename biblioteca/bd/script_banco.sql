@@ -79,7 +79,7 @@ idpedido INT(11) NOT NULL AUTO_INCREMENT,
 idendereco INT(11) NOT NULL,
 idusuario INT(11) NOT NULL,
 valorcupom VARCHAR(60),
-datacompra DATE NOT NULL,
+dataCompra DATE NOT NULL,
 idFormaPagamento INT NOT NULL,
 PRIMARY KEY (idpedido),
 FOREIGN KEY (idusuario) REFERENCES usuario(idusuario) ON DELETE CASCADE 
