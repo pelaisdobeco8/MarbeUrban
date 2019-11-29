@@ -120,3 +120,9 @@ function buscar(){
 	}
 }
 
+/** anon */
+function descricao ($idproduto){
+    $dados["produtos"] = pegarProdutoPorId($idproduto);
+    exibir ("produtos/descricao" , $dados);
+}
+

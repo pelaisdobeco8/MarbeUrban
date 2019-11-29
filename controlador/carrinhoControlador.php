@@ -65,3 +65,9 @@ function remover($index){
     $_SESSION["carrinho"] = array_values($_SESSION["carrinho"]);
     redirecionar("carrinho/index");   
 }
+
+function limpar ()
+{
+    unset($_SESSION['carrinho']);
+    redirecionar('paginas/');
+}
